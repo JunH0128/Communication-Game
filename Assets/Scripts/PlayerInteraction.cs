@@ -7,6 +7,8 @@ public class PlayerInteraction : MonoBehaviour
 
     [SerializeField] private Camera playerCamera;
     [SerializeField] private float interactionDistance = 2f;
+    [SerializeField] public AudioSource buttonPress;
+    [SerializeField] public AudioSource transmitPress;
     // Start is called before the first frame update
 
     // Update is called once per frame
@@ -16,30 +18,38 @@ public class PlayerInteraction : MonoBehaviour
         {
             TryInteract();
         }
-    }   
+    }
 
-     private void TryInteract() 
+    private void TryInteract()
     {
         Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward); // Camera Position
 
         if (Physics.Raycast(ray, out RaycastHit hit, interactionDistance)) // Raycast  Detection
         {
             Buttons button = hit.collider.GetComponent<Buttons>(); // If raycast hits a button get the component
-            
-            if (button != null) 
+
+            if (button != null)
             {
-                Debug.Log("Interacted with button");
-                button.Press(); // Button press method in the Buttons script
+                if (button != null)
+                {
+                    if (button.CompareTag("Transmit"))
+                    {
+                        if (transmitPress != null)
+                            transmitPress.Play();
+                    }
+                    else
+                    {
+                        if (buttonPress != null)
+                            buttonPress.Play();
+                    }
+
+                    Debug.Log("Interacted with button");
+                    button.Press();
+                }
+
+
             }
 
-
         }
-
     }
-
-
-        
-        
-
-    
 }
