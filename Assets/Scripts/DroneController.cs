@@ -6,27 +6,28 @@ public class DroneController : MonoBehaviour
 {
     // Start is called before the first frame update
     /* [SerializeField] private float moveDistance = 2f; */
-    [SerializeField] private float moveSpeed = 1f;
+    [SerializeField] private float moveDistance = 3f;
+    /* [SerializeField] private float moveSpeed = 1f; */ // Variable for speed of drone movement
     [SerializeField] private float turnAmount = 90f;
 
-    private bool isMovingForward = false;
+    /* private bool isMovingForward = false; */
 
     //Drone movement methods
 
-    private void Update()
+   /*  private void Update()
     {
         if (isMovingForward)
         {
             transform.position += transform.forward * moveSpeed * Time.deltaTime;  
         }
-    }
+    } */
     public void MoveForward()
     {
-        /* transform.position += transform.forward * moveDistance;
-        Debug.Log("Drone moved forward"); */
+         transform.position += transform.forward * moveDistance;
+        Debug.Log("Drone moved forward"); 
 
-        isMovingForward = true; //Start true 
-        Debug.Log("Drone started moving forward");
+      /*   isMovingForward = true; //Start true // Uncomment to use continuous movement
+        Debug.Log("Drone started moving forward"); */
 
     }
 
@@ -44,7 +45,7 @@ public class DroneController : MonoBehaviour
 
     public void Stop()
     {
-        isMovingForward = false; //Make isMovingForward false
+        /* isMovingForward = false; //Make isMovingForward false */
         Debug.Log("Drone stopped");
     }
 }
