@@ -10,7 +10,7 @@ public class MorsePanelScript : MonoBehaviour
 
     public void AddDot()
     {
-        if (morseCode.Length >= 3)
+        if (morseCode.Length >= 3) // Limit to 3 characters
             return;
 
         morseCode += ".";
@@ -19,7 +19,7 @@ public class MorsePanelScript : MonoBehaviour
 
     public void AddDash()
     {
-        if (morseCode.Length >= 3)
+        if (morseCode.Length >= 3) // Limit to 3 characters
             return;
 
         morseCode += "-";
@@ -28,7 +28,7 @@ public class MorsePanelScript : MonoBehaviour
 
     public void Clear()
     {
-        morseCode = "";
+        morseCode = ""; // Clear text after pressing clear
         UpdateScreen();
     }
 
@@ -56,15 +56,15 @@ public class MorsePanelScript : MonoBehaviour
             
         }
 
-        morseCode = "";
+        morseCode = ""; // Clear after transmission
         UpdateScreen();
     }
 
     private void UpdateScreen() 
     {
-        if (morseCode.Length == 0)
+        if (morseCode.Length == 0) // If length is equal to 0 display "Enter Code" on the screen
         {
-            morseText.text = "Enter Code";
+            morseText.text = "Juns Mom";
             return;
         }
 
