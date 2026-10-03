@@ -50,6 +50,10 @@ public class MorsePanelScript : MonoBehaviour
             case "---":
                 drone.Stop();
                 break;
+            case "...":
+                Debug.Log("Drone morse code recognised");
+                drone.Scan();
+                break;
             default:
                 Debug.Log("Unknown Morse Code: " + morseCode);
                 break;
@@ -64,7 +68,7 @@ public class MorsePanelScript : MonoBehaviour
     {
         if (morseCode.Length == 0) // If length is equal to 0 display "Enter Code" on the screen
         {
-            morseText.text = "Juns Mom";
+            morseText.text = "Enter Command";
             return;
         }
 

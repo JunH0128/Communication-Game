@@ -10,6 +10,9 @@ public class DroneController : MonoBehaviour
     /* [SerializeField] private float moveSpeed = 1f; */ // Variable for speed of drone movement
     [SerializeField] private float turnAmount = 90f;
 
+    [Header("Radar Scan")]
+    [SerializeField] private RadarPulse radarPulse; 
+    
     /* private bool isMovingForward = false; */
 
     //Drone movement methods
@@ -21,6 +24,7 @@ public class DroneController : MonoBehaviour
             transform.position += transform.forward * moveSpeed * Time.deltaTime;  
         }
     } */
+
     public void MoveForward()
     {
          transform.position += transform.forward * moveDistance;
@@ -47,5 +51,21 @@ public class DroneController : MonoBehaviour
     {
         /* isMovingForward = false; //Make isMovingForward false */
         Debug.Log("Drone stopped");
+    }
+
+
+    public void Scan()
+    {
+        Debug.Log("Drone Scan() called");
+        if (radarPulse != null)
+        {
+            radarPulse.Pulse(); // Call the Pulse method on the RadarPulse script
+
+        }
+        else
+        {
+            Debug.LogWarning("RadarPulse reference is not set in DroneController.");
+        }
+        
     }
 }
