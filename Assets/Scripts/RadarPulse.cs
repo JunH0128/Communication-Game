@@ -10,6 +10,7 @@ public class RadarPulse : MonoBehaviour
 
     [SerializeField] private int pulseCount = 3;
     [SerializeField] private float delayBetweenPulses = 0.15f;
+    [SerializeField] private Ilumisoft.RadarSystem.Radar radarSystem;
 
     private Vector3 originalScale;
     private bool isPulsing;
@@ -24,7 +25,8 @@ public class RadarPulse : MonoBehaviour
     {
         if (!isPulsing)
         {
-            StartCoroutine(PulseRoutine());
+            radarSystem.RevealScan();
+            StartCoroutine(PulseRoutine());   
         }
     }
 

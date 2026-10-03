@@ -1,6 +1,7 @@
 using Ilumisoft.RadarSystem.UI;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
 
 namespace Ilumisoft.RadarSystem
 {
@@ -12,6 +13,9 @@ namespace Ilumisoft.RadarSystem
         /// Dictionary allowing to access the icon of a locatable
         /// </summary>
         readonly Dictionary<LocatableComponent, LocatableIconComponent> locatableIconDictionary = new();
+
+        [SerializeField] private bool scanActive = false;
+        [SerializeField] private float scanRevealDuration = 2.0f;
 
         [SerializeField]
         [Tooltip("The container icons will be added to")]
@@ -39,6 +43,20 @@ namespace Ilumisoft.RadarSystem
         /// Reference to the player
         /// </summary>
         public GameObject Player;
+
+        public void RevealScan()
+        {
+            StartCoroutine(RevealScanRoutine());
+        }
+
+        private IEnumerator RevealScanRoutine()
+        {
+            scanActive = true;
+
+            yield return new WaitForSeconds(scanRevealDuration);
+
+            scanActive = false;
+        }
 
         private void OnEnable()
         {
@@ -95,21 +113,34 @@ namespace Ilumisoft.RadarSystem
         /// <summary>
         /// Updates the position of all icons
         /// </summary>
-        private void UpdateLocatableIcons()
+       private void UpdateLocatableIcons()
         {
-            // Run through all locatables in the dictionary
             foreach (var locatable in locatableIconDictionary.Keys)
             {
-                // Update the icon position and visibility for the locatable
                 if (locatableIconDictionary.TryGetValue(locatable, out var icon))
                 {
                     if (TryGetIconLocation(locatable, out var iconLocation))
                     {
-                        icon.SetVisible(true);
-
                         var rectTransform = icon.GetComponent<RectTransform>();
-
                         rectTransform.anchoredPosition = iconLocation;
+
+                        bool shouldBeVisible = scanActive;
+
+                        if (locatable is Locatable radarLocatable)
+                        {
+                            switch (radarLocatable.Visibility)
+                            {
+                                case RadarVisibility.AlwaysVisible:
+                                    shouldBeVisible = true;
+                                    break;
+
+                                case RadarVisibility.ScanOnly:
+                                    shouldBeVisible = scanActive;
+                                    break;
+                            }
+                        }
+
+                        icon.SetVisible(shouldBeVisible);
                     }
                     else
                     {

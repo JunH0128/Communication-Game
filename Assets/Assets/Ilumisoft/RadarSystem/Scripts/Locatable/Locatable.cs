@@ -4,8 +4,18 @@ using UnityEngine;
 namespace Ilumisoft.RadarSystem
 {
     [AddComponentMenu("Radar System/Locatable")]
+
+    public enum RadarVisibility
+    {
+        AlwaysVisible,
+        ScanOnly
+    }
     public class Locatable : LocatableComponent
     {
+        [SerializeField]
+        private RadarVisibility radarVisibility = RadarVisibility.ScanOnly;
+
+        public RadarVisibility Visibility => radarVisibility;
         [SerializeField]
         protected LocatableIconComponent iconPrefab;
 

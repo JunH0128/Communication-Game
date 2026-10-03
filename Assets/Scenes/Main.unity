@@ -1822,6 +1822,18 @@ MonoBehaviour:
   maxSize: 4.5
   pulseCount: 3
   delayBetweenPulses: 0.15
+  radarSystem: {fileID: 1169182882}
+--- !u!114 &1169182882 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6372567932181713953, guid: bdb1cbda3fa076749b577d0be9dcd112, type: 3}
+  m_PrefabInstance: {fileID: 1996951694}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169182878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f3fc279c4b91e74486a6ccd06f15f53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1195309325
 GameObject:
   m_ObjectHideFlags: 0
@@ -2228,7 +2240,7 @@ GameObject:
   - component: {fileID: 1358118424}
   - component: {fileID: 1358118423}
   m_Layer: 0
-  m_Name: Locatable
+  m_Name: Hazard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2246,6 +2258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a35fd54ac079a8b47aa6549789157333, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  radarVisibility: 1
   iconPrefab: {fileID: 4922837886278913688, guid: 64491c38b1af452409456a53259a0f43, type: 3}
   clampOnRadar: 0
 --- !u!65 &1358118424
@@ -4097,6 +4110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a35fd54ac079a8b47aa6549789157333, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  radarVisibility: 0
   iconPrefab: {fileID: 4922837886278913688, guid: 2cade309467014b449fbd77ab77fa482, type: 3}
   clampOnRadar: 1
 --- !u!1 &1874254748
@@ -4195,8 +4209,10 @@ MonoBehaviour:
 
     TurnRight = -00
 
-    Stop = - -
-    -'
+    Scan = 000
+
+    Stop
+    = - - -'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4289,6 +4305,14 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 1865029438}
+    - target: {fileID: 6372567932181713953, guid: bdb1cbda3fa076749b577d0be9dcd112, type: 3}
+      propertyPath: scanActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6372567932181713953, guid: bdb1cbda3fa076749b577d0be9dcd112, type: 3}
+      propertyPath: applyRotation
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7117402367348631381, guid: bdb1cbda3fa076749b577d0be9dcd112, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.40779
