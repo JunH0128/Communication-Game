@@ -56,7 +56,9 @@ public class MorsePanelScript : MonoBehaviour
                 break;
             default:
                 Debug.Log("Unknown Morse Code: " + morseCode);
-                break;
+                morseText.text = "Unknown Command"; 
+                morseCode = ""; // Clear after transmission
+                return;
             
         }
 
