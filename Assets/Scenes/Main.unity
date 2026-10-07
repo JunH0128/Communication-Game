@@ -213,7 +213,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 56494745}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e7faf6d0c51e4844a340cdb5ad43945, type: 3}
+  m_Script: {fileID: 11500000, guid: f1723ef36e933134ba27e4243b319123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
@@ -230,7 +230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radarVisibility: 1
-  iconPrefab: {fileID: 4922837886278913688, guid: c798228be6402eb469b89b4f8b6ffc44, type: 3}
+  iconPrefab: {fileID: 4922837886278913688, guid: b7448e00ddfbaf54ea236baf536c9c22, type: 3}
   clampOnRadar: 0
 --- !u!65 &56494749
 BoxCollider:
@@ -1356,7 +1356,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0/10
+  m_text: 0/5
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2070,7 +2070,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 471729653}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e7faf6d0c51e4844a340cdb5ad43945, type: 3}
+  m_Script: {fileID: 11500000, guid: f1723ef36e933134ba27e4243b319123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
@@ -2087,7 +2087,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radarVisibility: 1
-  iconPrefab: {fileID: 4922837886278913688, guid: c798228be6402eb469b89b4f8b6ffc44, type: 3}
+  iconPrefab: {fileID: 4922837886278913688, guid: b7448e00ddfbaf54ea236baf536c9c22, type: 3}
   clampOnRadar: 0
 --- !u!65 &471729656
 BoxCollider:
@@ -2769,14 +2769,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.68235296, g: 0.8941177, b: 0.25490198, a: 1}
+  m_Color: {r: 0.5137255, g: 0.83137256, b: 0.06666667, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5af1e0561e72ee34093c9674bd96a709, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ac4f10284f80163448da082f40435b57, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3821,7 +3821,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f4e72fe5cedde0d4a9f51cd662ef8e46, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0476878c4eacb8e48bdda9241839cef7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4374,7 +4374,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1210680954
 Transform:
   m_ObjectHideFlags: 0
@@ -7489,7 +7489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fe310f1b1912da4094a9db73899e801, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxScrap: 3
+  maxScrap: 5
   scrapText: {fileID: 87809617}
 --- !u!114 &1865029447
 MonoBehaviour:
@@ -7500,12 +7500,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1865029438}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f1db372d38119a4b83c339e1622346c, type: 3}
+  m_Script: {fileID: 11500000, guid: 6bbda2332a1868549bb290cade40cb18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxIntegrity: 3
-  signalLostText: {fileID: 1544484241}
   integrityText: {fileID: 2115705970}
+  signalLostText: {fileID: 1544484241}
 --- !u!1 &1918489355
 GameObject:
   m_ObjectHideFlags: 0
@@ -8035,7 +8035,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2011875307}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e7faf6d0c51e4844a340cdb5ad43945, type: 3}
+  m_Script: {fileID: 11500000, guid: f1723ef36e933134ba27e4243b319123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
@@ -8052,7 +8052,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radarVisibility: 1
-  iconPrefab: {fileID: 4922837886278913688, guid: c798228be6402eb469b89b4f8b6ffc44, type: 3}
+  iconPrefab: {fileID: 4922837886278913688, guid: b7448e00ddfbaf54ea236baf536c9c22, type: 3}
   clampOnRadar: 0
 --- !u!65 &2011875311
 BoxCollider:
@@ -8373,14 +8373,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.68235296, g: 0.8941177, b: 0.25490198, a: 1}
+  m_Color: {r: 0.5137255, g: 0.8313726, b: 0.06666667, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5af1e0561e72ee34093c9674bd96a709, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ac4f10284f80163448da082f40435b57, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8423,7 +8423,7 @@ Transform:
   m_GameObject: {fileID: 2065374965}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.9, y: 0.48000002, z: 29.12}
+  m_LocalPosition: {x: 16.13, y: 0.48000002, z: 29.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
