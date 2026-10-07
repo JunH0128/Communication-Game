@@ -124,6 +124,13 @@ namespace Ilumisoft.RadarSystem
                         var rectTransform = icon.GetComponent<RectTransform>();
                         rectTransform.anchoredPosition = iconLocation;
 
+                        if (locatable.gameObject == Player)
+                        {
+                            rectTransform.localEulerAngles = new Vector3(0f, 0f, -Player.transform.eulerAngles.y);
+
+
+                        }
+
                         bool shouldBeVisible = scanActive;
 
                         if (locatable is Locatable radarLocatable)
